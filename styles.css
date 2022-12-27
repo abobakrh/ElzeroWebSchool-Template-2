@@ -455,7 +455,7 @@ section .description p {
 	width: 100%;
 	object-fit: cover;
 }
-.grid + button{
+.grid + button {
 	padding: 1rem 1.5rem;
 	width: fit-content;
 	background-color: var(--main-color);
@@ -467,3 +467,511 @@ section .description p {
 	margin-top: 3rem;
 }
 /* end portfolio */
+/* start video */
+.video {
+	height: 100vh;
+	position: relative;
+	padding: 0 !important;
+}
+.video::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 40%);
+}
+video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+.video .content {
+	z-index: 3;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: var(--transparent-color);
+	width: 100%;
+	height: 30%;
+	border: none;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-align: center;
+}
+.video .content button {
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+/* end video */
+/* start about us */
+.aboutUs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	padding-bottom: 0 !important;
+}
+.aboutUs .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+.aboutUs img {
+	position: relative;
+	bottom: -8rem;
+	max-width: 100%;
+	object-fit: cover;
+}
+@media (width < 676px) {
+	.aboutUs img {
+		bottom: -3rem;
+	}
+}
+/* end about us */
+/* start stats */
+.stats {
+	background-image: url(./images/stats.png);
+	background-size: cover;
+	position: relative;
+}
+.stats::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	background-color: rgba(0, 0, 0, 60%);
+}
+.stats .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-align: center;
+	flex-wrap: wrap;
+}
+.stats .stat {
+	height: 15rem;
+	width: 15rem;
+	gap: 2rem;
+	z-index: 3;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--transparent-color);
+}
+.stats .stat i {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	background-color: black;
+	margin: 0 auto;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.stats .stat h6 {
+	font-size: 2rem;
+}
+
+/* end stats */
+/* start testimonials */
+.testimonials_skills .container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5%;
+}
+@media (width < 1000px) {
+	.testimonials_skills .container {
+		flex-direction: column;
+	}
+	.testimonials_skills .left,
+	.testimonials_skills .right {
+		width: 100% !important;
+	}
+}
+.testimonials_skills .left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+	position: relative;
+	width: 47.5%;
+}
+.testimonials_skills h4 {
+	text-align: center;
+	font-size: larger;
+}
+.testimonials_skills p {
+	color: gray;
+	text-align: center;
+}
+.testimonials_skills .opinions {
+	gap: 0rem;
+}
+@media (width < 676px) {
+	.testimonials_skills .opinion {
+		flex-direction: column !important;
+	}
+}
+.testimonials_skills .opinion {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 3rem;
+}
+.testimonials_skills .opinionLeft {
+	padding: 1.2rem;
+	display: flex;
+	justify-content: center;
+}
+.testimonials_skills img {
+	border-radius: 50%;
+	width: 6rem;
+	object-fit: cover;
+}
+.testimonials_skills h5 {
+	font-weight: 300;
+	font-size: medium;
+	line-height: 2.5rem;
+}
+.testimonials_skills h5 + p {
+	text-align: end;
+}
+.testimonials_skills .opinionRight {
+	width: fit-content;
+	border-bottom: 0.01rem solid grey;
+	flex: 1;
+}
+.testimonials_skills .circles {
+	position: relative !important;
+	left: 0;
+}
+.testimonials_skills .circles::before,
+.testimonials_skills .circles::after {
+	border: 1px solid black;
+}
+.testimonials_skills .right {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	width: 47.5%;
+}
+.testimonials_skills .skills {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+.testimonials_skills .right .skill .progressBar {
+	height: 2rem;
+	background-color: rgb(222, 219, 219);
+	position: relative;
+}
+.testimonials_skills .progressBar::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 90%;
+	background-color: var(--main-color);
+}
+.testimonials_skills .skill:nth-child(2) .progressBar::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 85%;
+	background-color: var(--main-color);
+}
+.testimonials_skills .skill:nth-child(3) .progressBar::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 80%;
+	background-color: var(--main-color);
+}
+.testimonials_skills .skill:nth-child(1) label {
+	position: absolute;
+	left: 90%;
+	transform: translateX(-50%);
+	bottom: 155%;
+	background-color: black;
+	padding: 0.2rem;
+	color: white;
+	border-radius: 0.3rem;
+}
+.testimonials_skills .skill:nth-child(1) .progressBar::after {
+	content: "";
+	position: absolute;
+	height: 0.5rem;
+	width: 0.5rem;
+	background-color: black;
+	left: 90%;
+	top: -55%;
+	transform: translateX(-50%);
+	clip-path: polygon(0% 0%, 100% 0, 50% 100%);
+}
+.testimonials_skills .skill:nth-child(2) label {
+	position: absolute;
+	left: 85%;
+	transform: translateX(-50%);
+	bottom: 155%;
+	background-color: black;
+	padding: 0.2rem;
+	color: white;
+	border-radius: 0.3rem;
+}
+.testimonials_skills .skill:nth-child(2) .progressBar::after {
+	content: "";
+	position: absolute;
+	height: 0.5rem;
+	width: 0.5rem;
+	background-color: black;
+	left: 85%;
+	top: -55%;
+	transform: translateX(-50%);
+	clip-path: polygon(0% 0%, 100% 0, 50% 100%);
+}
+.testimonials_skills .skill:nth-child(3) label {
+	position: absolute;
+	left: 80%;
+	transform: translateX(-50%);
+	bottom: 155%;
+	background-color: black;
+	padding: 0.2rem;
+	color: white;
+	border-radius: 0.3rem;
+}
+.testimonials_skills .skill:nth-child(3) .progressBar::after {
+	content: "";
+	position: absolute;
+	height: 0.5rem;
+	width: 0.5rem;
+	background-color: black;
+	left: 80%;
+	top: -55%;
+	transform: translateX(-50%);
+	clip-path: polygon(0% 0%, 100% 0, 50% 100%);
+}
+.testimonials_skills .skill:nth-child(4) label {
+	position: absolute;
+	left: 90%;
+	transform: translateX(-50%);
+	bottom: 155%;
+	background-color: black;
+	padding: 0.2rem;
+	color: white;
+	border-radius: 0.3rem;
+}
+.testimonials_skills .skill:nth-child(4) .progressBar::after {
+	content: "";
+	position: absolute;
+	height: 0.5rem;
+	width: 0.5rem;
+	background-color: black;
+	left: 90%;
+	top: -55%;
+	transform: translateX(-50%);
+	clip-path: polygon(0% 0%, 100% 0, 50% 100%);
+}
+/* end testimonials */
+/* start quote */
+.quote {
+	background-image: url(./images/quote.jpg);
+	background-size: cover;
+	position: relative;
+}
+.quote::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: rgba(0, 0, 0, 60%);
+}
+.quote .container {
+	gap: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-between;
+	color: white;
+}
+.quote blockquote , .quote p{
+	z-index: 3;
+}
+.quote blockquote{
+	font-size: 1.6rem;
+}
+/* end quote */
+/* start pricing */
+.pricing .container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.pricing .container .top{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.pricing .bottom{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+	text-align: center;
+	width: 100%;
+	margin: 4rem 0;
+	gap: 1.8rem;
+}
+.pricing .bottom .plan{
+	background-color: #fcfcfc;
+	border-top: 1px solid var(--main-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.bottom .plan .desc{
+	border-bottom: 1px solid var(--main-color);
+	padding: 2rem 0;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.plan .plan h4{
+	font-size: larger;
+	font-weight: 900;
+}
+.plan .desc h6{
+	position: relative;
+	font-size: 3rem;
+	margin-top: 1rem;
+}
+.plan .desc h6::before{
+	content: "$";
+	position: absolute;
+	top: 0;
+	left: -1.8rem;
+	font-size: large;
+}
+.plan .desc h6::after{
+	content: "/ Mo";
+	position: absolute;
+	bottom: 0.5rem;
+	right: -4rem;
+	font-size: large;
+	font-weight: 900;
+}
+.bottom .plan .features{
+	border-bottom: 1px solid var(--main-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.features h4{
+	border-bottom: 1px solid var(--main-color);
+	padding: 2rem 0;
+	width: 60%;
+	font-size: medium;
+	font-weight: 100;
+}
+.features h4:last-child{
+	border: none;
+}
+.plan button{
+	color: blue;
+	border: 1px solid var(--main-color);
+	padding: 1rem 1.5rem;
+	margin: 1.2rem 0;
+	background-color: white;
+}
+.pricing .contact h6{
+	font-size: larger;
+	font-weight: lighter;
+	margin-bottom: 1rem;
+}
+.pricing .contact button{
+	margin-left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--main-color);
+	border: none;
+	padding: 1rem 1.5rem;
+	color: white;
+}
+/* end pricing */
+/* start subscribe */
+.subscribe{
+	background-image: url(./images/subscribe.jpg);
+	background-size: cover;
+	position: relative;
+}
+.subscribe::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	background-color: rgba(0, 0, 0, 60%);
+	height: 100%;
+	width: 100%;
+}
+.subscribe .container{
+	z-index: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.subscribe .buttonInput{
+	border: 1px solid white;
+	display: flex;
+	z-index: 3;
+	width: 40%;
+	color: white;
+	margin-right: 2rem;
+}
+.subscribe input{
+	width: 100%;
+	padding: 1.5rem 2rem;
+	color: white;
+	font-size: larger;
+	background-color: transparent;
+}
+.subscribe button{
+	background-color: var(--main-color);
+	border: none;
+	color: white;
+	padding: 1rem;
+	font-size: large;
+}
+.subscribe .content{
+	width: calc(60% - 2rem);
+	color: white;
+	z-index: 3;
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+/* end subscribe */
+/* start contact */
+.contactUs .top{
+	
+}
+/* end contact */
